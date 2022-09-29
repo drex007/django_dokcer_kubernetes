@@ -4,9 +4,14 @@ import os
 import sys
 import dotenv
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
+
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_k8s.settings')
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "django_k8s.settings")
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
@@ -18,6 +23,7 @@ def main():
     execute_from_command_line(sys.argv)
 
 
-if __name__ == '__main__':
-    dotenv.read_dotenv()
+if __name__ == "__main__":
+    dotenv.load_dotenv()
+    # dotenv.read_dotenv()
     main()

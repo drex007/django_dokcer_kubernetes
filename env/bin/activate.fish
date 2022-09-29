@@ -30,7 +30,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/zuumatek/Documents/projects/django_kubernetes/env"
+set -gx VIRTUAL_ENV "/home/zuumatek/Desktop/projects/django_dokcer_kubernetes/env"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

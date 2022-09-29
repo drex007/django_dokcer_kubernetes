@@ -1,4 +1,4 @@
-#!/home/zuumatek/Documents/projects/django_kubernetes/env/bin/python3
+#!/home/zuumatek/Desktop/projects/django_dokcer_kubernetes/env/bin/python3
 
 import sys
 import json

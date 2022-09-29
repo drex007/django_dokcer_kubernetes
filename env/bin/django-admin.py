@@ -1,4 +1,4 @@
-#!/home/zuumatek/Documents/projects/django_kubernetes/env/bin/python3
+#!/home/zuumatek/Desktop/projects/django_dokcer_kubernetes/env/bin/python3
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 

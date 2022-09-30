@@ -1,0 +1,29 @@
+version: '3.9'
+services:
+  django_k8s: #NAme of your choice for servies
+    depends_on:
+      - postgres
+    build: 
+      context: . #Path to the project you want to build
+      dockerfile: Dockerfile
+    image: django_k8s:1.00 #Name of the image container you built
+    environment:
+      - PORT=8020 #Specifying a port for your docker to run
+    env_file:
+      - .env
+    ports:
+      - "8002:8020" #Making the port to be accessible to the outside world
+    command: sh -c "chmod +x /app/migrate.sh && sh /app/migrate.sh && /app/entrypoint.sh" # Executing a shell command for migrate.sh
+  postgres: #Make sure this is same with your POSTGRES_HOST in your .env file
+    image: postgres
+    env_file:
+      - .env
+    expose:
+      - 5432 #Db port
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/ #Making you db content persistent even if the server goes down
+
+
+
+volumes:
+  postgres_data:

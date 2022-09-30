@@ -1,0 +1,5 @@
+docker compose up #Start you docker image
+docker compose down #Bring down your docker image
+docker compose up --build #Force build and not starting from scratch
+docker compose down --volumes
+docker rm -f containerID

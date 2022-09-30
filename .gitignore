@@ -1,10 +1,9 @@
-.env
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
-env/
-env
+
 
 # C extensions
 *.so
@@ -121,6 +120,7 @@ celerybeat.pid
 
 # SageMath parsed files
 *.sage.py
+
 
 # Environments
 .env
